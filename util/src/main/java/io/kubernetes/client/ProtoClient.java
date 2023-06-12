@@ -270,7 +270,7 @@ public class ProtoClient {
                   .build();
           break;
         default:
-          throw new ApiException("Unknown proto client API method: " + method);
+          throw new ApiException("Unknown proto client API method:: " + method);
       }
     }
     return getObjectOrStatusFromServer(builder, request);
