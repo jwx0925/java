@@ -322,7 +322,7 @@ public class ProtoClient {
     byte[] magic = new byte[4];
     Streams.readFully(stream, magic);
     if (!Arrays.equals(magic, MAGIC)) {
-      throw new ApiException("Unexpected magic number: " + Hex.encodeHexString(magic));
+      throw new ApiException("Unexpected magic number:: " + Hex.encodeHexString(magic));
     }
     return Unknown.parseFrom(stream);
   }
